@@ -379,6 +379,7 @@ export class Token {
    * @param freezeAuthority Optional account or multisig that can freeze token accounts
    * @param decimals Location of the decimal place
    * @param programId Optional token programId, uses the system programId by default
+   * @param mintAccount
    * @return Token object for the newly minted token
    */
   static async createMint(
@@ -388,8 +389,8 @@ export class Token {
     freezeAuthority: PublicKey | null,
     decimals: number,
     programId: PublicKey,
+    mintAccount: Keypair,
   ): Promise<Token> {
-    const mintAccount = Keypair.generate();
     const token = new Token(
       connection,
       mintAccount.publicKey,

@@ -35,7 +35,7 @@
   "scripts": {
     "build": "rollup -c",
     "build:browser-test": "rollup -c test/rollup.config.js",
-    "start": "babel-node cli/main.js",
+    "start": "babel-node examples/create_mint_and_transfer_tokens.js",
     "start-with-test-validator": "start-server-and-test 'solana-test-validator --reset --quiet' http://localhost:8899/health start",
     "lint": "npm run pretty && eslint .",
     "lint:fix": "npm run pretty:fix && eslint . --fix",
