@@ -6,6 +6,11 @@ const {Buffer} = require('buffer');
 /*
 TO USE:
 
+Run
+`npm i`
+`npm run build`
+`npm start`
+
 1. Change feePayerAccountPriv to the private key of the VANITY token
 2. Change fromTokenAccount to the public key of the wallet that you want ALL 250,000,000 tokens sent to
  */
