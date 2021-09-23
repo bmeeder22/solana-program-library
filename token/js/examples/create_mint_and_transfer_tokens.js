@@ -10,7 +10,7 @@ TO USE:
 2. Change fromTokenAccount to the public key of the wallet that you want ALL 250,000,000 tokens sent to
  */
 function getMintAccount() {
-  let feePayerAccountPriv = '159,109,253,114,179,192,89,62,230,87,56,209,53,249,203,1,129,82,44,101,9,222,237,242,146,185,24,33,139,97,203,33,180,178,57,132,212,157,88,173,124,79,236,208,231,231,237,208,97,155,19,111,166,149,87,60,196,240,164,172,113,216,86,243';
+  let feePayerAccountPriv = '166,104,100,190,110,68,5,37,250,29,118,79,195,142,84,138,116,55,255,19,137,53,189,71,182,25,147,80,35,199,25,239,7,5,232,213,32,115,218,49,83,119,26,12,150,182,101,102,13,254,209,64,98,112,43,174,146,32,91,36,142,115,17,3';
   const testFeePayerAccountPrivateKeyDecoded = feePayerAccountPriv
     .split(',')
     .map((s) => parseInt(s));
@@ -52,7 +52,7 @@ function getMintAccount() {
   console.log('creating associated token accounts');
   // Get the token account of the payerWallet Solana address, if it does not exist, create it
   const walletToMintNewTokensTo = await mint.getOrCreateAssociatedAccountInfo(
-    new PublicKey('4t4G7iAjNqV7sNGf6V9Hha4MQrrT6FtvfodsaaqRS6sT'),
+    payerWallet.publicKey,
   );
   console.log('finished creating associated token accounts');
 
